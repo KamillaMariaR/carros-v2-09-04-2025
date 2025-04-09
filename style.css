@@ -1,0 +1,256 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #ffe4e1; /* Misty Rose */
+  color: #880e4f; /* Dark Pink */
+  line-height: 1.4; /* Melhora legibilidade geral */
+}
+
+main {
+  background-color: #fff0f5; /* Lavender Blush */
+  width: 90%;
+  max-width: 950px;
+  margin: 20px auto;
+  border: 2px solid #e91e63; /* Pink */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #e91e63; /* Pink */
+  border-bottom: 1px solid #f48fb1; /* Lighter pink underline */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Título dos formulários de manutenção */
+h4 {
+    color: #c2185b; /* Darker pink */
+    margin-top: 15px;
+    margin-bottom: 10px; /* Menos espaço abaixo */
+    font-size: 1.1em;
+    border-bottom: 1px dotted #f48fb1;
+    padding-bottom: 3px;
+    display: inline-block; /* Para a borda ficar só no texto */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(233, 30, 99, 0), rgba(233, 30, 99, 0.75), rgba(233, 30, 99, 0));
+    margin: 30px 0;
+}
+
+section.container {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 8px;
+  border: 1px solid #f8bbd0; /* Light pink border */
+}
+
+#carro-imagem,
+#carroEsportivo-imagem,
+#caminhao-imagem,
+#moto-imagem {
+  width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+/* Container principal de cada veículo */
+#carro-container, #carroEsportivo-container, #caminhao-container, #moto-container {
+    margin-bottom: 15px; /* Espaço antes dos inputs de criação */
+}
+
+/* Parágrafos de status e detalhes */
+#carro-status, #carroEsportivo-status, #caminhao-status, #moto-status {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+#carro-detalhes, #carroEsportivo-detalhes, #caminhao-detalhes, #moto-detalhes {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Painel Velocidade */
+.painel-velocidade {
+  max-width: 350px;
+  margin: 10px auto 15px auto;
+  position: relative;
+}
+.barra-velocidade {
+  width: 100%; height: 20px; background-color: #e0e0e0;
+  border-radius: 10px; overflow: hidden; position: relative;
+  border: 1px solid #bdbdbd;
+}
+.ponteiro {
+  height: 100%; background: linear-gradient(to right, #81c784, #4caf50);
+  width: 0; transition: width 0.3s ease-in-out;
+  border-radius: 10px 0 0 10px;
+}
+.velocidade-display { margin-top: 5px; font-weight: bold; color: #424242; }
+
+/* Grupo de botões de ação */
+.botoes {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px; /* Espaçamento entre itens (botões, inputs) */
+  align-items: center; /* Alinha itens verticalmente */
+}
+
+button {
+  background-color: #e91e63; color: white;
+  padding: 10px 15px; border: none; border-radius: 5px;
+  cursor: pointer; margin: 5px; /* Margem para espaçamento extra */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 0.95em;
+}
+button:hover:not(:disabled) { background-color: #c2185b; transform: translateY(-1px); }
+button:disabled { background-color: #f8bbd0; cursor: not-allowed; opacity: 0.7; transform: none;}
+
+/* Inputs gerais (texto, numero, data, hora) */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+  padding: 8px 10px;
+  margin: 5px; /* Mesmo margin dos botões para alinhar */
+  border: 1px solid #f48fb1;
+  border-radius: 5px;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  /* Define um tamanho base para inputs */
+  min-width: 100px;
+  max-width: 180px; /* Evita que fiquem muito largos */
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #e91e63; outline: none;
+    box-shadow: 0 0 3px rgba(233, 30, 99, 0.5);
+}
+
+/* Grupo de inputs de criação/atualização */
+div > input[type="text"],
+div > input[type="number"] {
+    /* Ajustes podem ser feitos aqui se necessário */
+}
+
+/* Área de Exibição de Informações */
+#informacoesVeiculo {
+  margin-top: 20px; padding: 15px;
+  border: 1px dashed #c2185b; background-color: #fce4ec;
+  border-radius: 5px; text-align: left; white-space: pre-wrap;
+  word-wrap: break-word; color: #333;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 150px; /* Aumenta altura mínima */
+  line-height: 1.5;
+  font-size: 0.9em; /* Tamanho da fonte monoespaçada */
+}
+
+/* Animações de Aceleração/Freagem */
+.animacao-aceleracao, .animacao-freagem {
+    position: absolute; top: -5px; left: 0; width: 100%; height: 5px;
+    opacity: 0; transition: opacity 0.3s ease-out; pointer-events: none;
+    z-index: 10; border-radius: 5px;
+}
+.animacao-aceleracao { background: linear-gradient(to right, rgba(76, 175, 80, 0.8), transparent); }
+.animacao-freagem { background-color: rgba(255, 0, 0, 0.7); }
+.animacao-aceleracao.ativa, .animacao-freagem.ativa { opacity: 1; }
+
+/* Container dos Formulários de Manutenção */
+.manutencao-forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui espaço entre os forms */
+    gap: 20px; /* Espaço entre os forms */
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #fce4ec; /* Separador leve */
+}
+
+/* Formulário Individual de Manutenção */
+.manutencao-form {
+    flex: 1; /* Ocupa espaço disponível igualmente */
+    min-width: 280px; /* Largura mínima */
+    max-width: 400px; /* Largura máxima */
+    padding: 15px 20px;
+    border: 1px solid #f48fb1;
+    border-radius: 8px;
+    background-color: #fff8fa; /* Tom ainda mais claro de rosa */
+    text-align: center; /* Centraliza título e botão */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra leve */
+}
+
+.manutencao-form h4 {
+    margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+/* Inputs dentro dos formulários de manutenção */
+.manutencao-form input[type="text"],
+.manutencao-form input[type="number"],
+.manutencao-form input[type="date"],
+.manutencao-form input[type="time"] {
+    display: block; /* Um por linha */
+    width: calc(100% - 20px); /* Largura total menos padding lateral do input */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; /* Espaço entre inputs */
+    box-sizing: border-box;
+    max-width: none; /* Remove o max-width geral para estes inputs */
+}
+
+.manutencao-form button {
+    margin-top: 10px;
+    width: auto; /* Largura automática baseada no texto */
+    padding: 10px 25px; /* Mais padding horizontal */
+}
+
+/* Lista de Agendamentos Futuros */
+#listaAgendamentos {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left; /* Alinha texto à esquerda */
+}
+
+#listaAgendamentos li {
+    background-color: #fce4ec;
+    border: 1px solid #f8bbd0;
+    border-radius: 4px;
+    padding: 10px 15px; /* Mais padding */
+    margin-bottom: 8px; /* Mais espaço entre itens */
+    font-size: 0.95em; /* Tamanho um pouco maior */
+    color: #555;
+    line-height: 1.4;
+}
+/* Item placeholder quando não há agendamentos */
+#listaAgendamentos li.nenhum {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 15px;
+}
+
+/* Parágrafos de info específica (Turbo, Carga) */
+#infoEsportivo, #infoCaminhao, #infoMoto {
+    font-weight: bold;
+    color: #c2185b; /* Darker pink */
+    margin-top: 8px;
+    min-height: 1.2em; /* Garante espaço mesmo vazio */
+    font-size: 1.05em; /* Um pouco maior */
+}
