@@ -116,6 +116,7 @@ button {
   transition: background-color 0.2s ease, transform 0.1s ease;
   font-size: 0.95em;
 }
+
 button:hover:not(:disabled) { background-color: #c2185b; transform: translateY(-1px); }
 button:disabled { background-color: #f8bbd0; cursor: not-allowed; opacity: 0.7; transform: none;}
 
@@ -142,11 +143,14 @@ input[type="time"]:focus {
     box-shadow: 0 0 3px rgba(233, 30, 99, 0.5);
 }
 
-/* Grupo de inputs de criação/atualização */
+/* Bloco REMOVIDO pois estava vazio e os estilos gerais acima já cobrem os inputs */
+/*
 div > input[type="text"],
 div > input[type="number"] {
-    /* Ajustes podem ser feitos aqui se necessário */
+     Ajustes podem ser feitos aqui se necessário
 }
+*/
+
 
 /* Área de Exibição de Informações */
 #informacoesVeiculo {
@@ -159,6 +163,7 @@ div > input[type="number"] {
   line-height: 1.5;
   font-size: 0.9em; /* Tamanho da fonte monoespaçada */
 }
+
 
 /* Animações de Aceleração/Freagem */
 .animacao-aceleracao, .animacao-freagem {

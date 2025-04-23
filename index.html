@@ -270,7 +270,20 @@
         </section>
 
     </main>
-    <script src="script.js"></script> <!-- Link para JS -->
-</body>
 
+<!-- Carregamento dos Scripts Separados -->
+<!-- A ORDEM É IMPORTANTE DEVIDO ÀS DEPENDÊNCIAS E HERANÇA -->
+<script src="js/manutencao.js"></script>     <!-- 1. Classe base de Manutenção -->
+<script src="js/veiculo.js"></script>       <!-- 2. Classe base Veiculo (usa Manutencao) -->
+<script src="js/carro.js"></script>         <!-- 3. Classe Carro (herda de Veiculo) -->
+<script src="js/carroEsportivo.js"></script><!-- 4. Classe CarroEsportivo (herda de Carro) -->
+<script src="js/caminhao.js"></script>      <!-- 5. Classe Caminhao (herda de Carro) -->
+<script src="js/moto.js"></script>          <!-- 6. Classe Moto (herda de Carro) -->
+<script src="js/garagem.js"></script>       <!-- 7. Classe Garagem (usa todas as anteriores) -->
+<script src="js/main.js"></script>          <!-- 8. Script principal (instancia Garagem e inicializa) -->
+
+</body>
+</html>
+
+</body>
 </html>
