@@ -93,4 +93,4 @@ Contribuições são bem-vindas! Se você encontrar um bug ou tiver uma ideia de
 
 ## Contato
 
-Se você tiver dúvidas ou sugestões, pode abrir uma issue neste repositório ou entrar em contato através do meu perfil no GitHub: [KamillaMariaR](https://github.com/SeuNomeDeUsuario).
+Se você tiver dúvidas ou sugestões, pode abrir uma issue neste repositório ou entrar em contato através do meu perfil no GitHub: [KamillaMariaR](https://github.com/KamillaMariaR).
