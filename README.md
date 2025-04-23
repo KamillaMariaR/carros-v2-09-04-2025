@@ -42,11 +42,11 @@ Este é um projeto front-end simples que não requer servidor web.
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone https://github.com/SeuNomeDeUsuario/NomeDoSeuRepositorio.git
+    https://github.com/KamillaMariaR/carros-v2-09-04-2025
     ```
 2.  **Navegue até a Pasta do Projeto:**
     ```bash
-    cd NomeDoSuoRepositorio
+    cd carros-v2-09-04-2025
     ```
 3.  **Abra o Arquivo `index.html`:**
     Simplesmente abra o arquivo `index.html` no seu navegador de preferência (Chrome, Firefox, Edge, etc.). Você pode fazer isso clicando duas vezes no arquivo ou usando o comando `open index.html` no terminal (em macOS/Linux) ou `start index.html` (em Windows).
@@ -93,4 +93,4 @@ Contribuições são bem-vindas! Se você encontrar um bug ou tiver uma ideia de
 
 ## Contato
 
-Se você tiver dúvidas ou sugestões, pode abrir uma issue neste repositório ou entrar em contato através do meu perfil no GitHub: [SeuNomeDeUsuario](https://github.com/SeuNomeDeUsuario).
+Se você tiver dúvidas ou sugestões, pode abrir uma issue neste repositório ou entrar em contato através do meu perfil no GitHub: [KamillaMariaR](https://github.com/SeuNomeDeUsuario).
