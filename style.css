@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif;
   text-align: center;
@@ -258,4 +259,81 @@ div > input[type="number"] {
     margin-top: 8px;
     min-height: 1.2em; /* Garante espaço mesmo vazio */
     font-size: 1.05em; /* Um pouco maior */
+}
+
+/* === Estilos para Detalhes Extras API === */
+.botoes-api {
+    margin-top: 15px; /* Espaçamento acima do botão API */
+    text-align: center;
+}
+
+.btn-detalhes-extras {
+    background-color: #673ab7; /* Roxo */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 0.9em;
+}
+
+.btn-detalhes-extras:hover {
+    background-color: #512da8; /* Roxo mais escuro */
+}
+
+.detalhes-extras-container {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px dashed #b39ddb; /* Roxo claro */
+    background-color: #f3e5f5; /* Lilás bem claro */
+    border-radius: 5px;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #4a148c; /* Roxo escuro */
+    /* display: none; inicialmente escondido via style inline no HTML */
+}
+
+.detalhes-extras-container h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #5e35b1; /* Roxo médio */
+    border-bottom: 1px solid #d1c4e9;
+    padding-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.detalhes-extras-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.detalhes-extras-container li {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.detalhes-extras-container li::before {
+    content: "•"; /* Bullet point */
+    color: #7e57c2; /* Roxo */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0px; /* Ajuste fino vertical */
+}
+
+.detalhes-extras-container .loading,
+.detalhes-extras-container .error,
+.detalhes-extras-container .not-found {
+    font-style: italic;
+    text-align: center;
+    color: #757575; /* Cinza */
+}
+
+.detalhes-extras-container .error {
+    color: #d32f2f; /* Vermelho erro */
+    font-weight: bold;
 }

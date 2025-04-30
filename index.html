@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <!-- Link para CSS -->
     <title>Garagem Interativa com Manutenção</title> <!-- Título Atualizado -->
 </head>
@@ -46,6 +47,16 @@
                 <input type="number" id="combustivel" placeholder="Add Combustível (%)" min="0" max="100">
                 <button onclick="garagem.abastecerVeiculo('meuCarro')" id="abastecer-btn">Abastecer</button>
             </div>
+
+            <!-- === Bloco Detalhes Extras (API) para Carro === -->
+            <div class="botoes-api">
+                <button class="btn-detalhes-extras" data-veiculo-id="meuCarro">Ver Detalhes Extras (API)</button>
+            </div>
+            <div id="detalhes-extras-meuCarro" class="detalhes-extras-container" style="display: none;">
+                <!-- Os detalhes da API serão carregados aqui -->
+            </div>
+            <!-- === Fim Bloco Detalhes Extras === -->
+
              <!-- Formulários de Manutenção para Carro -->
             <div class="manutencao-forms-container">
                 <div class="manutencao-form">
@@ -104,6 +115,16 @@
                 <input type="number" id="combustivelEsportivo" placeholder="Add Combustível (%)" min="0" max="100">
                 <button onclick="garagem.abastecerVeiculo('carroEsportivo')" id="abastecer-carroEsportivo-btn">Abastecer</button>
             </div>
+
+            <!-- === Bloco Detalhes Extras (API) para Carro Esportivo === -->
+            <div class="botoes-api">
+                <button class="btn-detalhes-extras" data-veiculo-id="carroEsportivo">Ver Detalhes Extras (API)</button>
+            </div>
+            <div id="detalhes-extras-carroEsportivo" class="detalhes-extras-container" style="display: none;">
+                <!-- Os detalhes da API serão carregados aqui -->
+            </div>
+            <!-- === Fim Bloco Detalhes Extras === -->
+
              <!-- Formulários de Manutenção para Esportivo -->
             <div class="manutencao-forms-container">
                 <div class="manutencao-form">
@@ -167,6 +188,16 @@
                 <input type="number" id="combustivelCaminhao" placeholder="Add Combustível (%)" min="0" max="100">
                 <button onclick="garagem.abastecerVeiculo('caminhao')" id="abastecer-caminhao-btn">Abastecer</button>
             </div>
+
+            <!-- === Bloco Detalhes Extras (API) para Caminhão === -->
+            <div class="botoes-api">
+                <button class="btn-detalhes-extras" data-veiculo-id="caminhao">Ver Detalhes Extras (API)</button>
+            </div>
+            <div id="detalhes-extras-caminhao" class="detalhes-extras-container" style="display: none;">
+                <!-- Os detalhes da API serão carregados aqui -->
+            </div>
+            <!-- === Fim Bloco Detalhes Extras === -->
+
             <!-- Formulários de Manutenção para Caminhão -->
             <div class="manutencao-forms-container">
                 <div class="manutencao-form">
@@ -223,6 +254,16 @@
                 <input type="number" id="combustivelMoto" placeholder="Add Combustível (%)" min="0" max="100">
                 <button onclick="garagem.abastecerVeiculo('moto')" id="abastecer-moto-btn">Abastecer</button>
             </div>
+
+            <!-- === Bloco Detalhes Extras (API) para Moto === -->
+            <div class="botoes-api">
+                <button class="btn-detalhes-extras" data-veiculo-id="moto">Ver Detalhes Extras (API)</button>
+            </div>
+            <div id="detalhes-extras-moto" class="detalhes-extras-container" style="display: none;">
+                <!-- Os detalhes da API serão carregados aqui -->
+            </div>
+            <!-- === Fim Bloco Detalhes Extras === -->
+
              <!-- Formulários de Manutenção para Moto -->
             <div class="manutencao-forms-container">
                 <div class="manutencao-form">
@@ -273,7 +314,7 @@
 
 <!-- Carregamento dos Scripts Separados -->
 <!-- A ORDEM É IMPORTANTE DEVIDO ÀS DEPENDÊNCIAS E HERANÇA -->
-<script src="js/manutencao.js"></script>     <!-- 1. Classe base de Manutenção -->
+<script src="js/manutencao.js"></script>     <!-- 1. Classe base de Manutencao -->
 <script src="js/veiculo.js"></script>       <!-- 2. Classe base Veiculo (usa Manutencao) -->
 <script src="js/carro.js"></script>         <!-- 3. Classe Carro (herda de Veiculo) -->
 <script src="js/carroEsportivo.js"></script><!-- 4. Classe CarroEsportivo (herda de Carro) -->
@@ -281,9 +322,6 @@
 <script src="js/moto.js"></script>          <!-- 6. Classe Moto (herda de Carro) -->
 <script src="js/garagem.js"></script>       <!-- 7. Classe Garagem (usa todas as anteriores) -->
 <script src="js/main.js"></script>          <!-- 8. Script principal (instancia Garagem e inicializa) -->
-
-</body>
-</html>
 
 </body>
 </html>
