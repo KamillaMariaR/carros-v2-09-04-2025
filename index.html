@@ -310,6 +310,21 @@
             <div id="informacoesVeiculo">Selecione um veículo acima para ver seus detalhes e histórico de manutenção concluída.</div> <!-- Texto Padrão Atualizado -->
         </section>
 
+        <hr> 
+
+        <!-- Nova Seção: Planejar Viagem com Previsão do Tempo -->
+        <section class="container" id="planejar-viagem-secao">
+            <h2>Planejar Viagem (Previsão do Tempo)</h2>
+            <div class="form-previsao">
+                <input type="text" id="destino-viagem" placeholder="Digite a cidade de destino">
+                <button id="verificar-clima-btn">Verificar Clima</button>
+            </div>
+            <div id="previsao-tempo-resultado" class="previsao-container">
+                <!-- Resultados da previsão do tempo serão exibidos aqui -->
+                <p>Digite uma cidade e clique em "Verificar Clima" para ver a previsão do tempo atual.</p>
+            </div>
+        </section>
+
     </main>
 
 <!-- Carregamento dos Scripts Separados -->
@@ -321,7 +336,8 @@
 <script src="js/caminhao.js"></script>      <!-- 5. Classe Caminhao (herda de Carro) -->
 <script src="js/moto.js"></script>          <!-- 6. Classe Moto (herda de Carro) -->
 <script src="js/garagem.js"></script>       <!-- 7. Classe Garagem (usa todas as anteriores) -->
-<script src="js/main.js"></script>          <!-- 8. Script principal (instancia Garagem e inicializa) -->
+<script src="js/weatherService.js"></script> <!-- 8. Funções de serviço para API de clima -->
+<script src="js/main.js"></script>          <!-- 9. Script principal (instancia Garagem e inicializa) -->
 
 </body>
 </html>

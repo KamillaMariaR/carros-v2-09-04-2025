@@ -1,4 +1,50 @@
+
 // js/garagem.js
+
+/**
+ * Dados de veículos simulando uma API externa.
+ * NOTA: Em um cenário real, esses dados seriam buscados de um endpoint de API,
+ * mas aqui são incorporados diretamente no JS para simplificação.
+ */
+const DADOS_VEICULOS_API_SIMULADA = [
+  {
+    "id": "meuCarro",
+    "modeloOriginal": "Civic",
+    "valorFIPE": "R$ 95.000,00",
+    "recallPendente": "Verificar sistema de airbags (Campanha #1234)",
+    "dicaManutencao": "Trocar óleo do motor a cada 10.000 km ou 1 ano.",
+    "seguroMedioAnual": "R$ 2.800,00",
+    "consumoMedio": "11 km/l (cidade) / 14 km/l (estrada)"
+  },
+  {
+    "id": "carroEsportivo",
+    "modeloOriginal": "Pagani Huayra",
+    "valorFIPE": "R$ 15.000.000,00",
+    "recallPendente": null,
+    "dicaManutencao": "Revisão especializada a cada 5.000 km. Pneus de alta performance requerem atenção especial.",
+    "seguroMedioAnual": "R$ 150.000,00",
+    "consumoMedio": "4 km/l (cidade) / 7 km/l (estrada)"
+  },
+  {
+    "id": "caminhao",
+    "modeloOriginal": "Mercedes-Benz Actros",
+    "valorFIPE": "R$ 450.000,00",
+    "recallPendente": "Inspeção do sistema de freios pneumáticos (Campanha #5678)",
+    "dicaManutencao": "Verificar calibragem dos pneus e nível de Arla 32 semanalmente. Lubrificação periódica do chassi.",
+    "seguroMedioAnual": "R$ 12.000,00",
+    "consumoMedio": "2.5 km/l (carregado)"
+  },
+  {
+    "id": "moto",
+    "modeloOriginal": "Kawasaki Ninja",
+    "valorFIPE": "R$ 55.000,00",
+    "recallPendente": null,
+    "dicaManutencao": "Manter a corrente lubrificada e tensionada. Verificar freios antes de cada uso.",
+    "seguroMedioAnual": "R$ 2.200,00",
+    "consumoMedio": "18 km/l"
+  }
+];
+
 
 /**
  * Gerencia a coleção de veículos, a persistência e a interação com a UI.
@@ -140,6 +186,73 @@ class Garagem {
             return false; // Indica falha no carregamento
         }
     }
+
+    // --- Busca Detalhes Extras (API Simulada - AGORA INCORPORADA) ---
+
+    /**
+     * Busca detalhes extras de um veículo nos dados SIMULADOS (agora embutidos no JS).
+     * Não usa fetch neste cenário. Retorna uma Promise para manter a compatibilidade
+     * com a chamada 'await' em mostrarDetalhesExtras.
+     * @param {string} identificadorVeiculo O ID interno do veículo (ex: 'meuCarro', 'moto').
+     * @returns {Promise<object|null>} Uma Promise que resolve com o objeto de dados do veículo encontrado ou null se não encontrado.
+     */
+    async buscarDetalhesVeiculoAPI(identificadorVeiculo) {
+        console.log(`Buscando detalhes extras nos dados embutidos para: ${identificadorVeiculo}`);
+        
+        // Simula um pequeno atraso, como se fosse uma requisição de rede rápida
+        await new Promise(resolve => setTimeout(resolve, 50)); 
+
+        try {
+            // Procura o veículo pelo ID no array de dados embutido
+            const dadosVeiculo = DADOS_VEICULOS_API_SIMULADA.find(veiculo => veiculo.id === identificadorVeiculo);
+
+            // Retorna os dados encontrados ou null se não encontrou
+            return dadosVeiculo || null;
+
+        } catch (error) {
+             // Este catch é menos provável de ser acionado agora, pois não há requisição de rede,
+             // mas é mantido para robustez (ex: erro inesperado na busca find)
+            console.error(`Erro ao buscar detalhes nos dados embutidos para ${identificadorVeiculo}:`, error);
+            return null;
+        }
+    }
+
+    /**
+     * Busca e exibe os detalhes extras de um veículo na área correspondente da UI.
+     * @param {string} veiculoId O ID interno do veículo.
+     */
+    async mostrarDetalhesExtras(veiculoId) {
+        const displayElement = document.getElementById(`detalhes-extras-${veiculoId}`);
+        if (!displayElement) {
+            console.error(`Elemento de exibição 'detalhes-extras-${veiculoId}' não encontrado.`);
+            return;
+        }
+
+        // Mostra 'Carregando...' e garante que a área esteja visível
+        displayElement.innerHTML = '<p class="loading">Carregando detalhes extras...</p>';
+        displayElement.style.display = 'block'; // Garante que a div esteja visível
+
+        // Chama a função de busca (agora pesquisa nos dados embutidos)
+        const detalhes = await this.buscarDetalhesVeiculoAPI(veiculoId);
+
+        // Processa o resultado
+        if (detalhes) {
+            // Dados encontrados - Formata e exibe
+            let htmlConteudo = `<h4>Detalhes Extras (${detalhes.modeloOriginal || veiculoId})</h4><ul>`;
+            if (detalhes.valorFIPE) htmlConteudo += `<li><strong>Valor FIPE (aprox.):</strong> ${detalhes.valorFIPE}</li>`;
+            if (detalhes.recallPendente) htmlConteudo += `<li><strong>Recall Pendente:</strong> ${detalhes.recallPendente}</li>`;
+            else htmlConteudo += `<li><strong>Recall Pendente:</strong> Nenhum encontrado.</li>`;
+            if (detalhes.dicaManutencao) htmlConteudo += `<li><strong>Dica de Manutenção:</strong> ${detalhes.dicaManutencao}</li>`;
+            if (detalhes.seguroMedioAnual) htmlConteudo += `<li><strong>Seguro Médio Anual (est.):</strong> ${detalhes.seguroMedioAnual}</li>`;
+            if (detalhes.consumoMedio) htmlConteudo += `<li><strong>Consumo Médio:</strong> ${detalhes.consumoMedio}</li>`;
+            htmlConteudo += '</ul>';
+            displayElement.innerHTML = htmlConteudo;
+        } else {
+            // Dados não encontrados (ID não existe na constante DADOS_VEICULOS_API_SIMULADA)
+            displayElement.innerHTML = `<p class="not-found">Detalhes extras não encontrados para este veículo.</p>`;
+        }
+    }
+
 
     // --- Helpers de Exibição de Manutenção ---
 
@@ -556,10 +669,8 @@ class Garagem {
             const veiculo = this.veiculos[nomeVeiculo];
             if (Array.isArray(veiculo.historicoManutencao)) {
                 veiculo.historicoManutencao.forEach(manutencao => {
-                    // Garante que temos uma instância (pode vir do localStorage como obj)
-                     // const m = (manutencao instanceof Manutencao) ? manutencao : this._deserializarManutencao(manutencao); // Deserializar já faz isso
-                     const m = manutencao; // Assumindo que carregarGaragem já criou instâncias corretas
-                    if (!m) return; // Pula se deserialização falhou
+                    const m = manutencao; // Já deve ser instância
+                    if (!m) return;
 
                     const dataM = m.getDateTime();
                     // Filtra: status 'agendada', dados válidos (sem erros), data/hora no futuro
