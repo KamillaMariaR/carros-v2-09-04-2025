@@ -1,40 +1,38 @@
-
 body {
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #ffe4e1; /* Misty Rose */
-  color: #880e4f; /* Dark Pink */
-  line-height: 1.4; /* Melhora legibilidade geral */
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #ffe4e1;
+    color: #880e4f;
+    line-height: 1.4;
 }
 
 main {
-  background-color: #fff0f5; /* Lavender Blush */
-  width: 90%;
-  max-width: 950px;
-  margin: 20px auto;
-  border: 2px solid #e91e63; /* Pink */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff0f5;
+    width: 90%;
+    max-width: 950px;
+    margin: 20px auto;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1,
 h2 {
-  color: #e91e63; /* Pink */
-  border-bottom: 1px solid #f48fb1; /* Lighter pink underline */
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+    color: #e91e63;
+    border-bottom: 1px solid #f48fb1;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* Título dos formulários de manutenção */
 h4 {
-    color: #c2185b; /* Darker pink */
+    color: #c2185b;
     margin-top: 15px;
-    margin-bottom: 10px; /* Menos espaço abaixo */
+    margin-bottom: 10px;
     font-size: 1.1em;
     border-bottom: 1px dotted #f48fb1;
     padding-bottom: 3px;
-    display: inline-block; /* Para a borda ficar só no texto */
+    display: inline-block;
 }
 
 hr {
@@ -45,204 +43,243 @@ hr {
 }
 
 section.container {
-  margin-bottom: 30px;
-  padding: 15px;
-  background-color: #ffffff; /* White background for sections */
-  border-radius: 8px;
-  border: 1px solid #f8bbd0; /* Light pink border */
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #f8bbd0;
 }
 
 #carro-imagem,
 #carroEsportivo-imagem,
 #caminhao-imagem,
 #moto-imagem {
-  width: 180px;
-  height: auto;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
 }
 
-/* Container principal de cada veículo */
-#carro-container, #carroEsportivo-container, #caminhao-container, #moto-container {
-    margin-bottom: 15px; /* Espaço antes dos inputs de criação */
+#carro-container,
+#carroEsportivo-container,
+#caminhao-container,
+#moto-container {
+    margin-bottom: 15px;
 }
 
-/* Parágrafos de status e detalhes */
-#carro-status, #carroEsportivo-status, #caminhao-status, #moto-status {
+#carro-status,
+#carroEsportivo-status,
+#caminhao-status,
+#moto-status {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 5px;
 }
-#carro-detalhes, #carroEsportivo-detalhes, #caminhao-detalhes, #moto-detalhes {
+
+#carro-detalhes,
+#carroEsportivo-detalhes,
+#caminhao-detalhes,
+#moto-detalhes {
     font-size: 0.95em;
     color: #666;
     margin-bottom: 10px;
 }
 
-/* Painel Velocidade */
 .painel-velocidade {
-  max-width: 350px;
-  margin: 10px auto 15px auto;
-  position: relative;
+    max-width: 350px;
+    margin: 10px auto 15px auto;
+    position: relative;
 }
-.barra-velocidade {
-  width: 100%; height: 20px; background-color: #e0e0e0;
-  border-radius: 10px; overflow: hidden; position: relative;
-  border: 1px solid #bdbdbd;
-}
-.ponteiro {
-  height: 100%; background: linear-gradient(to right, #81c784, #4caf50);
-  width: 0; transition: width 0.3s ease-in-out;
-  border-radius: 10px 0 0 10px;
-}
-.velocidade-display { margin-top: 5px; font-weight: bold; color: #424242; }
 
-/* Grupo de botões de ação */
+.barra-velocidade {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #bdbdbd;
+}
+
+.ponteiro {
+    height: 100%;
+    background: linear-gradient(to right, #81c784, #4caf50);
+    width: 0;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
+}
+
+.velocidade-display {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #424242;
+}
+
 .botoes {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px; /* Espaçamento entre itens (botões, inputs) */
-  align-items: center; /* Alinha itens verticalmente */
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
 }
 
 button {
-  background-color: #e91e63; color: white;
-  padding: 10px 15px; border: none; border-radius: 5px;
-  cursor: pointer; margin: 5px; /* Margem para espaçamento extra */
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  font-size: 0.95em;
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 0.95em;
 }
 
-button:hover:not(:disabled) { background-color: #c2185b; transform: translateY(-1px); }
-button:disabled { background-color: #f8bbd0; cursor: not-allowed; opacity: 0.7; transform: none;}
+button:hover:not(:disabled) {
+    background-color: #c2185b;
+    transform: translateY(-1px);
+}
 
-/* Inputs gerais (texto, numero, data, hora) */
+button:disabled {
+    background-color: #f8bbd0;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="date"],
 input[type="time"] {
-  padding: 8px 10px;
-  margin: 5px; /* Mesmo margin dos botões para alinhar */
-  border: 1px solid #f48fb1;
-  border-radius: 5px;
-  font-size: 0.95em;
-  box-sizing: border-box;
-  /* Define um tamanho base para inputs */
-  min-width: 100px;
-  max-width: 180px; /* Evita que fiquem muito largos */
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #f48fb1;
+    border-radius: 5px;
+    font-size: 0.95em;
+    box-sizing: border-box;
+    min-width: 100px;
+    max-width: 180px;
 }
+
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus,
 input[type="time"]:focus {
-    border-color: #e91e63; outline: none;
+    border-color: #e91e63;
+    outline: none;
     box-shadow: 0 0 3px rgba(233, 30, 99, 0.5);
 }
 
-/* Bloco REMOVIDO pois estava vazio e os estilos gerais acima já cobrem os inputs */
-/*
-div > input[type="text"],
-div > input[type="number"] {
-     Ajustes podem ser feitos aqui se necessário
-}
-*/
-
-
-/* Área de Exibição de Informações */
 #informacoesVeiculo {
-  margin-top: 20px; padding: 15px;
-  border: 1px dashed #c2185b; background-color: #fce4ec;
-  border-radius: 5px; text-align: left; white-space: pre-wrap;
-  word-wrap: break-word; color: #333;
-  font-family: "Courier New", Courier, monospace;
-  min-height: 150px; /* Aumenta altura mínima */
-  line-height: 1.5;
-  font-size: 0.9em; /* Tamanho da fonte monoespaçada */
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #c2185b;
+    background-color: #fce4ec;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #333;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 150px;
+    line-height: 1.5;
+    font-size: 0.9em;
 }
 
-
-/* Animações de Aceleração/Freagem */
-.animacao-aceleracao, .animacao-freagem {
-    position: absolute; top: -5px; left: 0; width: 100%; height: 5px;
-    opacity: 0; transition: opacity 0.3s ease-out; pointer-events: none;
-    z-index: 10; border-radius: 5px;
+.animacao-aceleracao,
+.animacao-freagem {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 5px;
 }
-.animacao-aceleracao { background: linear-gradient(to right, rgba(76, 175, 80, 0.8), transparent); }
-.animacao-freagem { background-color: rgba(255, 0, 0, 0.7); }
-.animacao-aceleracao.ativa, .animacao-freagem.ativa { opacity: 1; }
 
-/* Container dos Formulários de Manutenção */
+.animacao-aceleracao {
+    background: linear-gradient(to right, rgba(76, 175, 80, 0.8), transparent);
+}
+
+.animacao-freagem {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.animacao-aceleracao.ativa,
+.animacao-freagem.ativa {
+    opacity: 1;
+}
+
 .manutencao-forms-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Distribui espaço entre os forms */
-    gap: 20px; /* Espaço entre os forms */
+    justify-content: space-around;
+    gap: 20px;
     margin-top: 25px;
     padding-top: 20px;
-    border-top: 1px solid #fce4ec; /* Separador leve */
+    border-top: 1px solid #fce4ec;
 }
 
-/* Formulário Individual de Manutenção */
 .manutencao-form {
-    flex: 1; /* Ocupa espaço disponível igualmente */
-    min-width: 280px; /* Largura mínima */
-    max-width: 400px; /* Largura máxima */
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
     padding: 15px 20px;
     border: 1px solid #f48fb1;
     border-radius: 8px;
-    background-color: #fff8fa; /* Tom ainda mais claro de rosa */
-    text-align: center; /* Centraliza título e botão */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra leve */
+    background-color: #fff8fa;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .manutencao-form h4 {
-    margin-bottom: 15px; /* Espaço abaixo do título */
+    margin-bottom: 15px;
 }
 
-/* Inputs dentro dos formulários de manutenção */
 .manutencao-form input[type="text"],
 .manutencao-form input[type="number"],
 .manutencao-form input[type="date"],
 .manutencao-form input[type="time"] {
-    display: block; /* Um por linha */
-    width: calc(100% - 20px); /* Largura total menos padding lateral do input */
+    display: block;
+    width: calc(100% - 20px);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px; /* Espaço entre inputs */
+    margin-bottom: 10px;
     box-sizing: border-box;
-    max-width: none; /* Remove o max-width geral para estes inputs */
+    max-width: none;
 }
 
 .manutencao-form button {
     margin-top: 10px;
-    width: auto; /* Largura automática baseada no texto */
-    padding: 10px 25px; /* Mais padding horizontal */
+    width: auto;
+    padding: 10px 25px;
 }
 
-/* Lista de Agendamentos Futuros */
 #listaAgendamentos {
     list-style: none;
     padding: 0;
     margin-top: 10px;
-    text-align: left; /* Alinha texto à esquerda */
+    text-align: left;
 }
 
 #listaAgendamentos li {
     background-color: #fce4ec;
     border: 1px solid #f8bbd0;
     border-radius: 4px;
-    padding: 10px 15px; /* Mais padding */
-    margin-bottom: 8px; /* Mais espaço entre itens */
-    font-size: 0.95em; /* Tamanho um pouco maior */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    font-size: 0.95em;
     color: #555;
     line-height: 1.4;
 }
-/* Item placeholder quando não há agendamentos */
+
 #listaAgendamentos li.nenhum {
     background-color: transparent;
     border: none;
@@ -252,23 +289,23 @@ div > input[type="number"] {
     padding: 15px;
 }
 
-/* Parágrafos de info específica (Turbo, Carga) */
-#infoEsportivo, #infoCaminhao, #infoMoto {
+#infoEsportivo,
+#infoCaminhao,
+#infoMoto {
     font-weight: bold;
-    color: #c2185b; /* Darker pink */
+    color: #c2185b;
     margin-top: 8px;
-    min-height: 1.2em; /* Garante espaço mesmo vazio */
-    font-size: 1.05em; /* Um pouco maior */
+    min-height: 1.2em;
+    font-size: 1.05em;
 }
 
-/* === Estilos para Detalhes Extras API === */
 .botoes-api {
-    margin-top: 15px; /* Espaçamento acima do botão API */
+    margin-top: 15px;
     text-align: center;
 }
 
 .btn-detalhes-extras {
-    background-color: #673ab7; /* Roxo */
+    background-color: #673ab7;
     color: white;
     padding: 8px 12px;
     border: none;
@@ -279,26 +316,25 @@ div > input[type="number"] {
 }
 
 .btn-detalhes-extras:hover {
-    background-color: #512da8; /* Roxo mais escuro */
+    background-color: #512da8;
 }
 
 .detalhes-extras-container {
     margin-top: 15px;
     padding: 15px;
-    border: 1px dashed #b39ddb; /* Roxo claro */
-    background-color: #f3e5f5; /* Lilás bem claro */
+    border: 1px dashed #b39ddb;
+    background-color: #f3e5f5;
     border-radius: 5px;
     text-align: left;
     font-size: 0.9em;
     line-height: 1.5;
-    color: #4a148c; /* Roxo escuro */
-    /* display: none; inicialmente escondido via style inline no HTML */
+    color: #4a148c;
 }
 
 .detalhes-extras-container h4 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #5e35b1; /* Roxo médio */
+    color: #5e35b1;
     border-bottom: 1px solid #d1c4e9;
     padding-bottom: 5px;
     font-size: 1.1em;
@@ -317,12 +353,12 @@ div > input[type="number"] {
 }
 
 .detalhes-extras-container li::before {
-    content: "•"; /* Bullet point */
-    color: #7e57c2; /* Roxo */
+    content: "•";
+    color: #7e57c2;
     font-weight: bold;
     position: absolute;
     left: 0;
-    top: 0px; /* Ajuste fino vertical */
+    top: 0px;
 }
 
 .detalhes-extras-container .loading,
@@ -330,104 +366,373 @@ div > input[type="number"] {
 .detalhes-extras-container .not-found {
     font-style: italic;
     text-align: center;
-    color: #757575; /* Cinza */
+    color: #757575;
 }
 
 .detalhes-extras-container .error {
-    color: #d32f2f; /* Vermelho erro */
+    color: #d32f2f;
     font-weight: bold;
 }
-/* ... (seus estilos existentes) ... */
 
-/* === Estilos para Planejador de Viagem (Previsão do Tempo) === */
+/* Estilos para Planejador de Viagem */
 #planejar-viagem-secao h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
+
+.controles-previsao-topo {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.btn-alternar-unidade {
+    background-color: #757575;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.85em;
+    margin: 0;
+}
+
+.btn-alternar-unidade:hover {
+    background-color: #616161;
+}
+
 
 .form-previsao {
     display: flex;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espaço entre input e botão */
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 #destino-viagem {
     padding: 10px 12px;
-    border: 1px solid #f48fb1; /* Cor rosa claro do tema */
+    border: 1px solid #f48fb1;
     border-radius: 5px;
     font-size: 1em;
-    flex-grow: 1; /* Permite que o input cresça */
-    max-width: 300px; /* Limita a largura máxima */
-    min-width: 200px; /* Largura mínima */
+    flex-grow: 1;
+    max-width: 300px;
+    min-width: 180px;
 }
+
 #destino-viagem:focus {
-    border-color: #e91e63; /* Cor rosa principal do tema */
+    border-color: #e91e63;
     outline: none;
     box-shadow: 0 0 3px rgba(233, 30, 99, 0.5);
 }
 
 #verificar-clima-btn {
-    background-color: #4CAF50; /* Verde, como sugerido para "tempo" */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 18px;
     font-size: 0.95em;
-    /* Outras propriedades de botão já definidas globalmente (border, radius, cursor, transition) */
-}
-#verificar-clima-btn:hover:not(:disabled) {
-    background-color: #45a049; /* Verde mais escuro no hover */
 }
 
+#verificar-clima-btn:hover:not(:disabled) {
+    background-color: #45a049;
+}
 
 .previsao-container {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px dashed #81c784; /* Verde claro, combinando com o botão */
-    background-color: #e8f5e9; /* Fundo verde muito claro */
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px dashed #81c784;
+    background-color: #e8f5e9;
+    /* Cor base, pode ser sobrescrita */
     border-radius: 8px;
     text-align: left;
-    color: #2e7d32; /* Texto verde escuro */
+    /* color foi removido daqui, será definido por classe de temperatura */
     font-size: 0.95em;
     line-height: 1.6;
-    min-height: 100px; /* Altura mínima para feedback */
+    min-height: 80px;
 }
 
 .previsao-container h3 {
-    color: #1b5e20; /* Verde mais escuro para o título da previsão */
+    color: #1b5e20;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
-    border-bottom: 1px solid #a5d6a7; /* Linha divisória verde clara */
-    padding-bottom: 10px;
+    border-bottom: 1px solid #a5d6a7;
+    padding-bottom: 8px;
 }
 
 .previsao-container p {
-    margin-bottom: 8px;
-}
-.previsao-container p strong {
-    color: #388e3c; /* Verde médio para o texto em negrito */
+    margin-bottom: 6px;
 }
 
+/* .previsao-container p strong { color: #388e3c; } - Removido, cor virá da classe de temp */
 .previsao-container .loading,
 .previsao-container .error,
 .previsao-container .not-found {
     font-style: italic;
     text-align: center;
-    color: #555; /* Cinza escuro para mensagens de status/feedback */
-    padding: 15px 0; /* Mais espaço para mensagens de feedback */
+    color: #555;
+    padding: 10px 0;
 }
 
 .previsao-container .error {
-    color: #c62828; /* Vermelho escuro para mensagens de erro */
+    color: #c62828;
     font-weight: bold;
 }
 
-.weather-icon {
+.opcoes-previsao-dias {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-wrap: nowrap;
+}
+
+.opcoes-previsao-dias span {
+    font-size: 0.9em;
+    color: #555;
+    margin-right: 5px;
+}
+
+.opcoes-previsao-dias input[type="radio"] {
+    margin-left: 5px;
+    margin-right: 2px;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.opcoes-previsao-dias label {
+    font-size: 0.85em;
+    color: #333;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 2px 4px;
+}
+
+.previsao-dias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.previsao-dia-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 190px;
+    flex: 1 1 190px;
+    max-width: 260px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-image 0.5s ease;
+    overflow: hidden;
+    background-color: #f0f9f0;
+    /* Fallback */
+}
+
+.previsao-dia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-content-wrapper {
+    /* Mantido como estava */
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    /* background-color: inherit; removido para não interferir com degradê no pai */
+}
+
+.previsao-dia-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding-bottom: 5px;
+    /* Cor e borda serão herdadas ou definidas por classes de temperatura */
+}
+
+.weather-icon-daily {
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
     display: block;
-    margin: 0 auto 10px auto; /* Centraliza o ícone */
-    width: 100px; 
-    height: 100px;
-    background-color: #cce5ff; /* Fundo azul claro para o ícone, opcional */
-    border-radius: 50%; /* Torna o fundo do ícone circular, opcional */
+}
+
+.previsao-dia-card p {
+    font-size: 0.8em;
+    margin-bottom: 3px;
+}
+
+
+/* Degradês de fundo dinâmicos baseados na temperatura */
+/* As cores do texto (h4, p, strong) também são ajustadas para legibilidade */
+.previsao-dia-card.temp-grad-muito-frio {
+    background-image: linear-gradient(to bottom right, #d1e9fc, #a1c4fd);
+    border-color: #90caf9;
+}
+
+.temp-grad-muito-frio .card-content-wrapper h4,
+.temp-grad-muito-frio .card-content-wrapper p {
+    color: #0d47a1;
+}
+
+.temp-grad-muito-frio .card-content-wrapper h4 {
+    border-bottom-color: #bbdefb;
+}
+
+.previsao-dia-card.temp-grad-frio {
+    background-image: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+    border-color: #80deea;
+}
+
+.temp-grad-frio .card-content-wrapper h4,
+.temp-grad-frio .card-content-wrapper p {
+    color: #006064;
+}
+
+.temp-grad-frio .card-content-wrapper h4 {
+    border-bottom-color: #80deea;
+}
+
+.previsao-dia-card.temp-grad-ameno {
+    background-image: linear-gradient(to bottom right, #f1f8e9, #dcedc8);
+    border-color: #c5e1a5;
+}
+
+.temp-grad-ameno .card-content-wrapper h4,
+.temp-grad-ameno .card-content-wrapper p {
+    color: #33691e;
+}
+
+.temp-grad-ameno .card-content-wrapper h4 {
+    border-bottom-color: #c5e1a5;
+}
+
+.previsao-dia-card.temp-grad-quente {
+    background-image: linear-gradient(to bottom right, #fff3e0, #ffe0b2);
+    border-color: #ffcc80;
+}
+
+.temp-grad-quente .card-content-wrapper h4,
+.temp-grad-quente .card-content-wrapper p {
+    color: #e65100;
+}
+
+.temp-grad-quente .card-content-wrapper h4 {
+    border-bottom-color: #ffcc80;
+}
+
+.previsao-dia-card.temp-grad-muito-quente {
+    background-image: linear-gradient(to bottom right, #ffebee, #ffcdd2);
+    border-color: #ef9a9a;
+}
+
+.temp-grad-muito-quente .card-content-wrapper h4,
+.temp-grad-muito-quente .card-content-wrapper p {
+    color: #b71c1c;
+}
+
+.temp-grad-muito-quente .card-content-wrapper h4 {
+    border-bottom-color: #ef9a9a;
+}
+
+
+/* Removidos temporariamente os efeitos de chuva, neve, etc. para focar no degradê */
+
+
+.filtros-destaque-previsao {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fdf6f8;
+    border: 1px solid #fce4ec;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.filtros-destaque-previsao h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #ad1457;
+    border-bottom: none;
+}
+
+.filtros-destaque-previsao label {
+    font-size: 0.85em;
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.input-temp-destaque {
+    width: 45px;
+    padding: 4px 6px;
+    font-size: 0.9em;
+    margin-left: 3px;
+    border: 1px solid #f8bbd0;
+}
+
+.previsao-dia-card.highlight-rain {
+    border-left: 5px solid #1976D2 !important;
+    /* Azul mais escuro para chuva */
+    /* Poderia adicionar um overlay sutil aqui se desejado, em vez de animação complexa */
+}
+
+.previsao-dia-card.highlight-temp-low {
+    border-left: 5px solid #0097A7 !important;
+    /* Ciano mais escuro */
+}
+
+.previsao-dia-card.highlight-temp-high {
+    border-left: 5px solid #F57C00 !important;
+    /* Laranja mais escuro */
+}
+
+.detalhes-horarios-container {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    /* Borda mais genérica para funcionar com qqr fundo */
+    text-align: left;
+}
+
+.detalhes-horarios-container h5 {
+    font-size: 0.9em;
+    /* color: #00796b; Removido, cor será herdada do card pai */
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 8px;
+}
+
+.horario-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75em;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Fundo branco semi-transparente */
+    border-radius: 4px;
+    /* Cor do texto será herdada do card pai */
+}
+
+.horario-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.horario-item span:first-child {
+    font-weight: bold;
 }
